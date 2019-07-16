@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+
+<script language="JavaScript" src="md5.js"></script>
+ <script src="aes.js"></script>
+
+<script>
+console.log('passhash');
+    var passhash = calcMD5("input string");
+console.log(passhash);
+
+var encrypted = CryptoJS.AES.encrypt("ejemplo", "Secret Passphrase");
+//U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=
+
+var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
+//4d657373616765
+
+console.log(encrypted);
+console.log(decrypted.toString(CryptoJS.enc.Utf8));
+
+
+
+</script>
+
+</head>
+<body>
+
+
+<h3>index</h3>
+
+<iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/f1ff24e1-0489-4b59-bbcd-bb24c235e5df">
+</iframe>
+</body>
+</html>
